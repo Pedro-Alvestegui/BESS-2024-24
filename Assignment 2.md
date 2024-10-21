@@ -4,7 +4,7 @@
 - Process(s): Clipping by mask layer for livestock routes
 - Layer data installed through: https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMVPE
 
-  ```python
+ ```python
 processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Downloads\\znie_cyl_vvpp_ejes.gpkg|layername=znie_cyl_vvpp_ejes','MASK':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
   ```
 
@@ -14,7 +14,7 @@ processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Downl
 - Process(s): Clipping by mask layer for types of land
 - Layer data installed through: https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLCITDTSLUCLA
 
-  ```python
+```python
  processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Downloads\\siu_cyl_clasue.gpkg|layername=siu_cyl_clasue','MASK':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
   ```
 
@@ -22,9 +22,9 @@ processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Downl
 - Study Area: Segovia
 - Looking for position points of Microtus arvalis
 - Process(s): vector clipped by mask layer the Microtus arvalis position points
-- Layer data installed through: 
+- Layer data installed through: Given by professor on previous session
 
-  ```python
+```python
 processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:/Users/localuser/Documents/GIS data/Microtus_arvalis_5_!_bio1.gpkg|layername=bio1','MASK':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
   ```
 
@@ -34,9 +34,9 @@ processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:/Users/localuser/Document
 - Process(s): vector clipped by mask layer of the protection zones for birds and power lines
 - Layer data installed through: https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMZPA
 
-  ```Python
+```Python
 processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:/Users/localuser/Downloads/avifau_cyl_prot_laat.gpkg|layername=avifau_cyl_prot_laat','MASK':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'C:/Users/localuser/Documents/GIS data/ZEPA sego.gpkg'})
-  ```  
+  ```
 
 
 ¨Layer 5¨
@@ -45,6 +45,6 @@ processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:/Users/localuser/Download
 - Process(s): vector clipped by mask layer of the vulnerability of tree formaiton in Segovia
 - Layer data installed through:https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMFFV
 
-  ```python
+```python
 processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Downloads\\formaciones_forestales_cyl_vulnerabilidad.gpkg|layername=formaciones_forestales_cyl_vulnerabilidad','MASK':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
   ```
