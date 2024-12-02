@@ -186,4 +186,4 @@ analyze if the proposed solution to tackle the plague will have an impact on the
   
 * Map
   
-![Cartography Map.Assignment3.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Cartography%20Map_Assignment3.png)
+![Micro-mammals vs Common Vole Map.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Micro-mammals%20vs%20Common%20Vole%20Map.png)
