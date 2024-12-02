@@ -1,48 +1,48 @@
 # Layers
-1. Occurrence of the animal species called Crocidua russula: Common microorganisms in Castilla y Leon
+1. Occurrence of the animal species called Crocidua russula: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2435654
 * Layer Name: Crocidua_russula_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-2. Occurrence of the animal species called Neomys anomalus: Common microorganisms in Castilla y Leon
+2. Occurrence of the animal species called Neomys anomalus: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=7825895&year=2024,2024
 * Layer Name: Neomys_anomalus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-3. Occurrence of the animal species called Apodemos sylvaticus: Common microorganisms in Castilla y Leon
+3. Occurrence of the animal species called Apodemos sylvaticus: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2437760&year=2024,2024
 * Layer Name: Apodemus_sylvaticus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-4. Occurrence of the animal species called Mus musculas: Common microorgansims in Castilla y Leon
+4. Occurrence of the animal species called Mus musculas: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=7429082&year=2024,2024
 * Layer Name: Mus_musculus_occurrence
 * Layer Type: CSV
 * Scale: Castila y Leon
 
-5. Occurrence of the animal species called Mus spretus: Common microorganims in Castilla y Leon
+5. Occurrence of the animal species called Mus spretus: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2438793&year=2024,2024
 * Layer Name: Mus_spretus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-6. Occurrence of the animal species called Rattus norvegicus: Common microorganisms in Castilla y Leon
+6. Occurrence of the animal species called Rattus norvegicus: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2439261&year=2024,2024
 * Layer Name: Rattus_norvegicus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-7. Occurrence of the animal species called Eliomys quercinus: Common microorganisms in Castilla y Leon
+7. Occurrence of the animal species called Eliomys quercinus: Common micro-mammals in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2439683&year=2024,2024
 * Layer Name: Eliomys_quercinus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
 # Relevance of Layers
-  * These layers are relevant to our group's question of how the proposed solutions that we have such as the sonometers, bio-rodenticide, biological control, etc will possibly affect other major microorganisms that live in Castilla y Leon. Therefore, to answer the following question, the chosen layers are maps of occurrence of significant animals that one might find in the region. So, understanding the possible relation or sharing of habitat that those animals might have with the common vole will help us understand how to apply our solutions and where specifically.
+  * These layers are relevant to our group's question of how the proposed solutions that we have such as the sonometers, bio-rodenticide, biological control, etc will possibly affect other major micro-mammals that live in Castilla y Leon. Therefore, to answer the following question, the chosen layers are maps of occurrence of significant animals that one might find in the region. So, understanding the possible relation or sharing of habitat that those animals might have with the common vole will help us understand how to apply our solutions and where specifically.
 
 # Spatial Analysis Plans
 1. 
@@ -114,14 +114,14 @@ b. Tools & Workflows
             ```
              processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Documents\\Assignment_3_Final\\Eliomys_quercinus_occurrence.points.gpkg|layername=eliomys_quercinus_points','MASK':'C:/Users/localuser/Documents/GIS data/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
             ```
-    8. At the end I will have the distributions of the microorganisms in Castilla y Leon
+    8. At the end I will have the distributions of the micro-mammals in Castilla y Leon
  
 c. Expected Outcome
-* The expected outcome of this analysis is to show the microorganisms that live in Castilla y Leon along with the common vole. It is a safe assumption to believe that we will see many of the chosen animals living in the same areas, but one can also assume that there will be couple of animals that do not. When doing this, the outcome that we ended up achieving is that almost all of the microorganisms chosen are found in the region except for two which are the Mus spretus and the Rattus norvegicus. Even though we found information about those two living in Spain, there are no current records of them living in Castilla y Leon, or at least not recorded ones as seen on the map.
+* The expected outcome of this analysis is to show the micro-mammals that live in Castilla y Leon along with the common vole. It is a safe assumption to believe that we will see many of the chosen animals living in the same areas, but one can also assume that there will be couple of animals that do not. When doing this, the outcome that we ended up achieving is that almost all of the micro-mammals chosen are found in the region except for two which are the Mus spretus and the Rattus norvegicus. Even though we found information about those two living in Spain, there are no current records of them living in Castilla y Leon, or at least not recorded ones as seen on the map.
 
 2. 
   a. Purpose
-  * For my second spatial analysis the plan is to create buffers of all the microorganisms in relation to the common vole. By having buffers with radius that go according to each and one of their home ranges which vary according to the species we are able to see if their habitat range overlaps with the living range of the common vole. Knowing these information helps on see
+  * For my second spatial analysis the plan is to create buffers of all the micro-mammals in relation to the common vole. By having buffers with radius that go according to each and one of their home ranges which vary according to the species we are able to see if their habitat range overlaps with the living range of the common vole. Knowing these information helps on see
 analyze if the proposed solution to tackle the plague will have an impact on the habitat or the non-target animals. Through this information we will now know which areas have higher diversity population and apply the solution according to the possible impact it might have on other organisms.
 
   b. Tools & Workflows
@@ -173,16 +173,16 @@ analyze if the proposed solution to tackle the plague will have an impact on the
                processing.run("native:buffer", {'INPUT':'C:\\Users\\localuser\\Documents\\Assignment_3_Final\\Eliomys_quercinus_reprojection_buffered-gpkg.gpkg|layername=eliomys_quercinus_reprojection','DISTANCE':5000,'SEGMENTS':5,'END_CAP_STYLE':0,'JOIN_STYLE':0,'MITER_LIMIT':2,'DISSOLVE':False,'SEPARATE_DISJOINT':False,'OUTPUT':'TEMPORARY_OUTPUT'})
               ```
               
-    6. On the Buffers section, the distance is changed according to the microorganism and the distance is displayed in meters
+    6. On the Buffers section, the distance is changed according to the micro-mammals and the distance is displayed in meters
 
   c. Expected Outcome
-  * The expected outcome of this analysis is to show that there are some microorganisms animals that will overlap the habitat range of the common vole as the areas the common vole live in are also suitable for other species to live. At the same it will also show that some species will not overlap with the common vole giving a green light on the proceeding of the proposed solutions. Once again, when doing the testing, the resulsts showed both, that some do overlap and some do not, so when doing the project it is important to look at these areas.
+  * The expected outcome of this analysis is to show that there are some micro-mammals animals that will overlap the habitat range of the common vole as the areas the common vole live in are also suitable for other species to live. At the same it will also show that some species will not overlap with the common vole giving a green light on the proceeding of the proposed solutions. Once again, when doing the testing, the resulsts showed both, that some do overlap and some do not, so when doing the project it is important to look at these areas.
 
 
 # Cartographic
 * Topic & Intended Message
   
-  The topic and intended message the viewer should understand from the map is that the chosen microorganisms both do not and do overlap the common vole's habitat range. Some species have more distribution around Castilla y Leon as well as others do not, which makes one understand that the proposed solutions such as the appliance of bio-rodenticide, sonometers, etc are a viable options. Due to some areas not having great variety of diversity, but some areas do so more careness will be needed when doing the tests on those specific areas. The layers that were used were occurrence maps of the microorganisms, which are displayed as dots around the region. In addition, it also has buffers which displays what is around the area that the species lives in, displaying possible interactions with other beings or habitats. Each layer is styled in groups with the name of the species, and inside the group the squares are the buffers and the dots are the occurrence of the animal. The layout of the map is organized with a scale, an arrow to signal North, the legend to show what is being displayed, and the title to show what is the topic.
+  The topic and intended message the viewer should understand from the map is that the chosen micro-mammals both do not and do overlap the common vole's habitat range. Some species have more distribution around Castilla y Leon as well as others do not, which makes one understand that the proposed solutions such as the appliance of bio-rodenticide, sonometers, etc are a viable options. Due to some areas not having great variety of diversity, but some areas do so more careness will be needed when doing the tests on those specific areas. The layers that were used were occurrence maps of the micro-mammals, which are displayed as dots around the region. In addition, it also has buffers which displays what is around the area that the species lives in, displaying possible interactions with other beings or habitats. Each layer is styled in groups with the name of the species, and inside the group the squares are the buffers and the dots are the occurrence of the animal. The layout of the map is organized with a scale, an arrow to signal North, the legend to show what is being displayed, and the title to show what is the topic.
   
 * Map
   
