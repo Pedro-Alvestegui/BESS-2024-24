@@ -5,54 +5,56 @@
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-2. Ocurrence of the animal species called Neomys anomalus: Common microorganims in Castilla y Leon
+2. Occurrence of the animal species called Neomys anomalus: Common microorganisms in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=7825895&year=2024,2024
 * Layer Name: Neomys_anomalus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-3. Ocurrence of the animal species called Apodemos sylvaticus: Common microorganims in Castilla y Leon
+3. Occurrence of the animal species called Apodemos sylvaticus: Common microorganisms in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2437760&year=2024,2024
 * Layer Name: Apodemus_sylvaticus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-4. Ocurrence of the animal species called Mus musculas: Common microorganims in Castilla y Leon
+4. Occurrence of the animal species called Mus musculas: Common microorgansims in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=7429082&year=2024,2024
 * Layer Name: Mus_musculus_occurrence
 * Layer Type: CSV
 * Scale: Castila y Leon
 
-5. Ocurrence of the animal species called Mus spretus: Common microorganims in Castilla y Leon
+5. Occurrence of the animal species called Mus spretus: Common microorganims in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2438793&year=2024,2024
 * Layer Name: Mus_spretus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-6. Ocurrence of the animal species called Rattus norvegicus: Common microorganims in Castilla y Leon
+6. Occurrence of the animal species called Rattus norvegicus: Common microorganisms in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2439261&year=2024,2024
 * Layer Name: Rattus_norvegicus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
-7. Ocurrence of the animal species called Eliomys quercinus: Common microorganims in Castilla y Leon
+7. Occurrence of the animal species called Eliomys quercinus: Common microorganisms in Castilla y Leon
 * Source: https://www.gbif.org/zh/occurrence/download?country=ES&taxon_key=2439683&year=2024,2024
 * Layer Name: Eliomys_quercinus_occurrence
 * Layer Type: CSV
 * Scale: Castilla y Leon
 
+# Relevance of Layers
+  * These layers are relevant to our group's question of how the proposed solutions that we have such as the sonometers, bio-rodenticide, biological control, etc will possibly affect other major microorganisms that live in Castilla y Leon. Therefore, to answer the following question, the chosen layers are maps of occurrence of significant animals that one might find in the region. So, understanding the possible relation or sharing of habitat that those animals might have with the common vole will help us understand how to apply our solutions and where specifically.
 
 # Spatial Analysis Plans
 1. 
   a. Purpose
-  * My first spatial analysis plan is focusing on finding the distribution of the previous mentioned species throughout the region of Castilla y Leon. On one of our field trips we obtained the data that this species were commonly found in the region, along with the common vole. Therefore, the reason I focused on finding their distribution is to see if they live near the vole as well as to see if there is any possible correlation to where they live with where the common vole lives.
+  * My first spatial analysis plan is focused on finding the distribution of the previously mentioned species throughout the region of Castilla y Leon. On one of our field trips we obtained the data that this species were commonly found in the region, along with the common vole. Therefore, the reason I focused on finding their distribution is to see if they live near the vole as well as to see if there is any possible correlation to where they live with where the common vole lives.
 
 b. Tools & Workflows
 * To accompish these, the following steps were done:
-    1. Download all CSV files from this following website called GBIF: https://www.gbif.org/
-    2. Once it is downloaded, I will extract them from the zip file and put them on a specific folder
-    3. All this data will then be put into my virtual computer QGIS
-    4. Now we go to Processing Tool and select Create Points Layer from Table
+    1. Download all CSV files from the following website called GBIF: https://www.gbif.org/
+    2. Once it is downloaded, I extracted them from the zip file and put them on a specific folder
+    3. All this data was then put into my virtual computer QGIS
+    4. Now we press Processing Tool and select Create Points Layer from Table
        * Running Process for each species:
            * Crocidua russula
              ```
@@ -82,7 +84,7 @@ b. Tools & Workflows
               ```
                processing.run("native:createpointslayerfromtable", {'INPUT':'C:/Users/localuser/Documents/Assignment_3_Final/Eliomys_quercinus_occurrence.csv','XFIELD':'decimalLongitude','YFIELD':'decimalLatitude','ZFIELD':'','MFIELD':'','TARGET_CRS':QgsCoordinateReferenceSystem('EPSG:4326'),'OUTPUT':'TEMPORARY_OUTPUT'})
               ```
-    6. Lastly, to make it just for the Castilla y Leon region we need to, we select Clip Vector by Mask Layer from Vector Geoprocessing
+    6. Lastly, to make it just for the Castilla y Leon region we select Clip Vector by Mask Layer from Vector Geoprocessing
        * Running Process for each species:
          * Crocidua russula
            ```
@@ -112,14 +114,15 @@ b. Tools & Workflows
             ```
              processing.run("gdal:clipvectorbypolygon", {'INPUT':'C:\\Users\\localuser\\Documents\\Assignment_3_Final\\Eliomys_quercinus_occurrence.points.gpkg|layername=eliomys_quercinus_points','MASK':'C:/Users/localuser/Documents/GIS data/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
             ```
-    8. At the end I will have the distributions of the animal species throughout Castilla y Leon
+    8. At the end I will have the distributions of the microorganisms in Castilla y Leon
  
 c. Expected Outcome
-* The expected outcome for this analysis is to
+* The expected outcome of this analysis is to show the microorganisms that live in Castilla y Leon along with the common vole. It is a safe assumption to believe that we will see many of the chosen animals living in the same areas, but one can also assume that there will be couple of animals that do not. When doing this, the outcome that we ended up achieving is that almost all of the microorganisms chosen are found in the region except for two which are the Mus spretus and the Rattus norvegicus. Even though we found information about those two living in Spain, there are no current records of them living in Castilla y Leon, or at least not recorded ones as seen on the map.
 
 2. 
   a. Purpose
-  * For my second spatial analysis the plan is to create buffers of all the microorganisms in relation to the common vole. By having buffers with radius that go according to each and one of their home ranges which varied according to the species we are able to see if their habitat range overlaps with the living range of the common vole. Knowing these information helps on seeing if the solutions that we propose to tackle the plague will have an impact on the habitat or the non-target animals. Through this information we will now know which areas have higher diversity population and apply the solution according to the possible impact it might have on other organisms.
+  * For my second spatial analysis the plan is to create buffers of all the microorganisms in relation to the common vole. By having buffers with radius that go according to each and one of their home ranges which vary according to the species we are able to see if their habitat range overlaps with the living range of the common vole. Knowing these information helps on see
+analyze if the proposed solution to tackle the plague will have an impact on the habitat or the non-target animals. Through this information we will now know which areas have higher diversity population and apply the solution according to the possible impact it might have on other organisms.
 
   b. Tools & Workflows
   * To accomplish these, the following steps were added to the previous data that was achieved:
@@ -173,11 +176,14 @@ c. Expected Outcome
     6. On the Buffers section, the distance is changed according to the microorganism and the distance is displayed in meters
 
   c. Expected Outcome
-  * 
+  * The expected outcome of this analysis is to show that there are some microorganisms animals that will overlap the habitat range of the common vole as the areas the common vole live in are also suitable for other species to live. At the same it will also show that some species will not overlap with the common vole giving a green light on the proceeding of the proposed solutions. Once again, when doing the testing, the resulsts showed both, that some do overlap and some do not, so when doing the project it is important to look at these areas.
 
 
 # Cartographic
 * Topic & Intended Message
   
+  The topic and intended message the viewer should understand from the map is that the chosen microorganisms both do not and do overlap the common vole's habitat range. Some species have more distribution around Castilla y Leon as well as others do not, which makes one understand that the proposed solutions such as the appliance of bio-rodenticide, sonometers, etc are a viable options. Due to some areas not having great variety of diversity, but some areas do so more careness will be needed when doing the tests on those specific areas. The layers that were used were occurrence maps of the microorganisms, which are displayed as dots around the region. In addition, it also has buffers which displays what is around the area that the species lives in, displaying possible interactions with other beings or habitats. Each layer is styled in groups with the name of the species, and inside the group the squares are the buffers and the dots are the occurrence of the animal. The layout of the map is organized with a scale, an arrow to signal North, the legend to show what is being displayed, and the title to show what is the topic.
+  
 * Map
-![Map Showing Relation of Microorganism with Vole](Cartography Map.Assignment3.png)
+  
+![Cartography Map.Assignment3.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Cartography%20Map_Assignment3.png)
