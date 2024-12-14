@@ -25,6 +25,17 @@
       * Once all of these was done, I went to symbology where I changed it to categorized and added the colors of blue being 1 and red being 0.
 
 # Information Used
-  * Point File: https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Georeference_points.gpkg
   * Publication Link: https://www.redalyc.org/pdf/919/91925068006.pdf
-  * Map: 
+  * Map of Spain:
+
+   ![Spain_Map.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Spain_Map.png)
+   
+  * Map Focused on Castilla y Leon:
+
+  ![Castilla y Leon Map.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Castilla%20y%20Leon%20Map.png)
+
+# Results
+   * Points File: [GitHub link to Point file](//github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Georeference_points.gpkg)
+   * Georeference Map:
+
+     ![Georeference_Map_Assignment4.png](https://github.com/Pedro-Alvestegui/BESS-2024-24/blob/main/Georeference_Map_Assignment4.png)
